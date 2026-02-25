@@ -6,8 +6,8 @@ import { FileText, Phone, MessageSquare, Heart } from "lucide-react";
 const steps = [
   {
     icon: FileText,
-    title: "Form",
-    description: "Fill out the form so we can look at how we can help you achieve your recovery goals.",
+    title: "Forms",
+    description: "Fill out the forms so we can look at how we can help you achieve your recovery goals.",
   },
   {
     icon: Phone,
