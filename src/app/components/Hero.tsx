@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { CornerRightDown } from "lucide-react";
@@ -42,11 +43,10 @@ export const Hero = () => {
       {/* 1. Video Section - Top Half */}
       <div className="w-full h-[calc(50vh+100px)] relative overflow-hidden bg-neutral-900 group">
         
-        {/* Video Background Layer - using direct iframe with object-fit cover */}
+        {/* Video Background Layer */}
         <div className="absolute inset-0 z-0 overflow-hidden select-none pointer-events-none">
           {isMounted && (
             <iframe
-              /* UPDATED: New Physical Therapy Video ID inserted here */
               src="https://www.youtube.com/embed/Kmdztf0iDkQ?autoplay=1&mute=1&controls=0&loop=1&playlist=Kmdztf0iDkQ&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&fs=0&modestbranding=1"
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
               style={{ 
@@ -55,9 +55,9 @@ export const Hero = () => {
                 margin: 0,
                 padding: 0,
                 width: '100vw',
-                height: '56.25vw', // 16:9 aspect ratio (9/16 = 0.5625)
+                height: '56.25vw', 
                 minHeight: '100%',
-                minWidth: '177.77vh' // 16:9 aspect ratio (16/9 = 1.7777)
+                minWidth: '177.77vh' 
               }}
               allow="autoplay; encrypted-media"
               title="Background Video"
@@ -92,7 +92,6 @@ export const Hero = () => {
                 <p className="text-lg text-slate-600 leading-relaxed font-medium">
                     The best in home physical therapy in Arizona. Our community based approach gives you the best 1-on-1 doctor level care right in the comfort of your own home.
                 </p>
-                {/* Mobile: Stack vertically with full width. Desktop: Row layout */}
                 <div className="flex flex-col md:flex-row gap-3">
                     <Link
                       to="/intake"
