@@ -54,7 +54,13 @@ export const Header = () => {
         <div className="container mx-auto px-6 h-full flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <img src="https://iili.io/qHfdUsj.png" alt="ReThrive" className="h-12 md:h-16 w-auto object-contain" />
+            <img 
+              /* If you put Rectangle.png in the public folder, use this src: */
+              src="/rethrive-logo.png" 
+              alt="ReThrive Wellness" 
+              /* This makes it bigger on mobile (h-16) and MUCH bigger on desktop (md:h-28) */
+              className="h-16 md:h-28 w-auto object-contain" 
+            />
           </Link>
 
           {/* Desktop Navigation - Centered */}
