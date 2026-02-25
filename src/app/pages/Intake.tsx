@@ -91,6 +91,11 @@ export const Intake = () => {
                           <label className="text-sm font-semibold text-neutral-700">Phone Number</label>
                           <input type="tel" className="w-full p-3 bg-white border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0BA4AE]/20 focus:border-[#0BA4AE] transition-all" placeholder="(555) 555-5555" />
                         </div>
+                        {/* NEW: City/Valley Field per Janel */}
+                        <div className="space-y-2 md:col-span-2">
+                          <label className="text-sm font-semibold text-neutral-700">City or Part of the Valley</label>
+                          <input type="text" className="w-full p-3 bg-white border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0BA4AE]/20 focus:border-[#0BA4AE] transition-all" placeholder="e.g., North Scottsdale, Tempe..." />
+                        </div>
                     </div>
                   </div>
 
@@ -98,14 +103,14 @@ export const Intake = () => {
                   <div>
                     <h2 className="text-2xl font-bold text-neutral-900 mb-6">Clinical Details</h2>
                     <div className="space-y-6">
+                        {/* UPDATED: Service Dropdown per Janel */}
                         <div className="space-y-2">
-                          <label className="text-sm font-semibold text-neutral-700">Service Type</label>
+                          <label className="text-sm font-semibold text-neutral-700">Type of Service</label>
                           <select className="w-full p-3 bg-white border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0BA4AE]/20 focus:border-[#0BA4AE] transition-all text-neutral-600">
                               <option>Select a service...</option>
-                              <option>Physical Therapy Evaluation</option>
-                              <option>Sports Performance Training</option>
-                              <option>Post-Surgical Rehab</option>
-                              <option>Wellness Consultation</option>
+                              <option>Physical Therapy (PT)</option>
+                              <option>Occupational Therapy (OT)</option>
+                              <option>Wellness Coaching</option>
                           </select>
                         </div>
                         <div className="space-y-2">
@@ -235,4 +240,4 @@ export const Intake = () => {
       </div>
     </div>
   );
-};
+}; 
