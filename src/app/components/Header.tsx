@@ -46,7 +46,8 @@ export const Header = () => {
   return (
     <>
       <motion.header
-        className="fixed top-0 left-0 right-0 z-50 bg-[#1c1c1c] border-b border-white/5 h-20"
+        /* Brought the header back down to a normal, professional height (h-20 to h-24) */
+        className="fixed top-0 left-0 right-0 z-50 bg-[#1c1c1c] border-b border-white/5 h-20 md:h-24"
         initial={{ y: 0 }}
         animate={{ y: isHidden ? "-100%" : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -55,11 +56,10 @@ export const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <img 
-              /* If you put Rectangle.png in the public folder, use this src: */
               src="/rethrive-logo.png" 
               alt="ReThrive Wellness" 
-              /* This makes it bigger on mobile (h-16) and MUCH bigger on desktop (md:h-28) */
-              className="h-16 md:h-28 w-auto object-contain" 
+              /* Shrunk the logo to h-10 on mobile and h-14 on desktop for a clean, logical fit */
+              className="h-10 md:h-14 w-auto object-contain" 
             />
           </Link>
 
@@ -78,7 +78,6 @@ export const Header = () => {
 
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center gap-8 relative z-10">
-
             <Link
               to="/intake"
               className="bg-[#0BA4AE] text-[#1c1c1c] hover:bg-white px-6 py-2.5 font-bold text-[14px] transition-all shadow-sm rounded-sm uppercase tracking-wide"
