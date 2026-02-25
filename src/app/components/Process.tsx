@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from "motion/react";
 import { Link } from 'react-router';
 import { FileText, Phone, MessageSquare, Heart } from "lucide-react";
+import { easeInOut } from "framer-motion";
 
 const steps = [
   {
@@ -28,7 +29,7 @@ const steps = [
 
 const ANIMATION_CONFIG = {
   duration: 0.8,
-  ease: [0.22, 1, 0.36, 1],
+  ease: easeInOut,
 };
 
 const fadeInUp = {
