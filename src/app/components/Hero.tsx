@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { CornerRightDown } from "lucide-react";
@@ -38,12 +37,12 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-white pt-20">
+    <section className="bg-white pt-28">
       
       {/* 1. Video Section - Top Half */}
-      <div className="w-full h-[calc(50vh+100px)] relative overflow-hidden bg-neutral-900 group">
+      <div className="w-full h-[calc(50vh+100px)] relative overflow-hidden bg-brand-100 group">
         
-        {/* Video Background Layer */}
+        {/* Video Background Layer - using direct iframe with object-fit cover */}
         <div className="absolute inset-0 z-0 overflow-hidden select-none pointer-events-none">
           {isMounted && (
             <iframe
@@ -55,9 +54,9 @@ export const Hero = () => {
                 margin: 0,
                 padding: 0,
                 width: '100vw',
-                height: '56.25vw', 
+                height: '56.25vw', // 16:9 aspect ratio (9/16 = 0.5625)
                 minHeight: '100%',
-                minWidth: '177.77vh' 
+                minWidth: '177.77vh' // 16:9 aspect ratio (16/9 = 1.7777)
               }}
               allow="autoplay; encrypted-media"
               title="Background Video"
@@ -66,7 +65,7 @@ export const Hero = () => {
         </div>
         
         {/* Overlay for contrast and click protection */}
-        <div className="absolute inset-0 bg-[#1c1c1c]/20 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-[#2D3436]/20 z-10 pointer-events-none" />
       </div>
 
       {/* 2. Content Section - Bottom Half */}
@@ -80,7 +79,7 @@ export const Hero = () => {
                 viewport={{ once: true }}
             >
             <motion.div className="lg:col-span-8" variants={fadeInUp}>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-normal leading-none text-[#1c1c1c] mb-6">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-normal leading-none text-[#2D3436] mb-6">
                     Physical Therapy.
                 </h1>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-normal leading-none text-transparent bg-clip-text bg-gradient-to-r from-[#0BA4AE] to-[#088f98]">
@@ -89,19 +88,20 @@ export const Hero = () => {
             </motion.div>
 
             <motion.div className="lg:col-span-4 flex flex-col gap-6 pt-2" variants={fadeInUp}>
-                <p className="text-lg text-slate-600 leading-relaxed font-medium">
+                <p className="text-lg text-brand-600 leading-relaxed font-medium">
                     The best in home physical therapy in Arizona. Our community based approach gives you the best 1-on-1 doctor level care right in the comfort of your own home.
                 </p>
+                {/* Mobile: Stack vertically with full width. Desktop: Row layout */}
                 <div className="flex flex-col md:flex-row gap-3">
                     <Link
                       to="/intake"
-                      className="w-full md:w-auto px-8 py-4 bg-[#0BA4AE] text-white font-bold hover:bg-[#1c1c1c] hover:text-white transition-all shadow-sm flex items-center justify-center text-center uppercase tracking-wide rounded-sm text-sm"
+                      className="w-full md:w-auto px-8 py-4 bg-[#0BA4AE] text-white font-bold hover:bg-[#2D3436] hover:text-white transition-all shadow-sm flex items-center justify-center text-center uppercase tracking-wide rounded-sm text-sm"
                     >
                       Book Now
                     </Link>
                     <a
                       href="#services"
-                      className="w-full md:w-auto px-8 py-4 bg-white border border-slate-200 text-[#1c1c1c] font-bold hover:bg-slate-50 transition-all shadow-sm flex items-center justify-center gap-2 group uppercase tracking-wide rounded-sm text-sm"
+                      className="w-full md:w-auto px-8 py-4 bg-white border border-brand-200 text-[#2D3436] font-bold hover:bg-brand-50 transition-all shadow-sm flex items-center justify-center gap-2 group uppercase tracking-wide rounded-sm text-sm"
                     >
                       Our Services
                       <CornerRightDown className="w-4 h-4 transition-transform group-hover:translate-y-1" />

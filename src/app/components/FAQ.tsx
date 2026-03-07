@@ -44,15 +44,15 @@ const faqs = [
 
 const AccordionItem = ({ question, answer, isOpen, onClick }: { question: string; answer: string; isOpen: boolean; onClick: () => void }) => {
   return (
-    <div className="border-b border-white/10">
+    <div className="border-b border-brand-200">
       <button
         onClick={onClick}
         className="w-full py-6 flex items-start justify-between text-left group gap-8"
       >
-        <span className={`text-lg md:text-xl font-medium leading-snug transition-colors duration-300 ${isOpen ? "text-[#0BA4AE]" : "text-slate-200 group-hover:text-white"}`}>
+        <span className={`text-lg md:text-xl font-medium leading-snug transition-colors duration-300 ${isOpen ? "text-[#0BA4AE]" : "text-brand-700 group-hover:text-brand-900"}`}>
           {question}
         </span>
-        <div className={`shrink-0 border border-white/20 rounded-md p-1 transition-all duration-300 ${isOpen ? "bg-[#0BA4AE] border-[#0BA4AE] text-white" : "text-white group-hover:border-white"}`}>
+        <div className={`shrink-0 border rounded-md p-1 transition-all duration-300 ${isOpen ? "bg-[#0BA4AE] border-[#0BA4AE] text-white" : "border-brand-300 text-brand-500 group-hover:border-brand-500"}`}>
           {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
         </div>
       </button>
@@ -65,7 +65,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }: { question: string
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden"
             >
-                <div className="pb-8 text-slate-400 leading-relaxed text-base md:text-lg">
+                <div className="pb-8 text-brand-500 leading-relaxed text-base md:text-lg">
                     {answer}
                 </div>
             </motion.div>
@@ -79,33 +79,33 @@ export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-[#1c1c1c] text-white">
+    <section id="faq" className="py-24 md:py-32 bg-brand-50">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
           
           {/* Left Column - Sticky Content */}
           <div className="lg:col-span-4 lg:sticky lg:top-32">
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tight">
+            <h2 className="text-5xl md:text-6xl font-black text-brand-900 mb-8 tracking-tight">
               FAQ's
             </h2>
-            <p className="text-slate-400 mb-12 leading-relaxed text-lg">
+            <p className="text-brand-500 mb-12 leading-relaxed text-lg">
               Here, you'll find answers to common questions about our services, including the evaluation process, membership options, insurance coverage, and how we support your rehabilitation journey. If you have any additional questions or need further clarification, don't hesitate to reach out to our team.
             </p>
             
             <div className="flex flex-wrap gap-6 items-center">
               <Link 
                 to="/intake" 
-                className="px-8 py-3 bg-[#0BA4AE] text-white font-bold hover:bg-white hover:text-[#1c1c1c] transition-colors shadow-sm text-sm uppercase tracking-wide"
+                className="px-8 py-3 bg-[#0BA4AE] text-white font-bold hover:bg-brand-900 transition-colors shadow-sm text-sm uppercase tracking-wide"
               >
                 Contact Us
               </Link>
               
               {/* Custom Corner Bracket Button */}
-              <a href="#about" className="relative px-6 py-3 text-white font-bold text-sm uppercase tracking-wide group hover:text-[#0BA4AE] transition-colors">
-                <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-slate-500 group-hover:border-[#0BA4AE] transition-colors" />
-                <span className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-slate-500 group-hover:border-[#0BA4AE] transition-colors" />
-                <span className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-slate-500 group-hover:border-[#0BA4AE] transition-colors" />
-                <span className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-slate-500 group-hover:border-[#0BA4AE] transition-colors" />
+              <a href="#about" className="relative px-6 py-3 text-brand-700 font-bold text-sm uppercase tracking-wide group hover:text-[#0BA4AE] transition-colors">
+                <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-brand-300 group-hover:border-[#0BA4AE] transition-colors" />
+                <span className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-brand-300 group-hover:border-[#0BA4AE] transition-colors" />
+                <span className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-brand-300 group-hover:border-[#0BA4AE] transition-colors" />
+                <span className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-brand-300 group-hover:border-[#0BA4AE] transition-colors" />
                 Learn More About Us
               </a>
             </div>
@@ -113,7 +113,7 @@ export const FAQ = () => {
 
           {/* Right Column - Accordion List */}
           <div className="lg:col-span-8">
-            <div className="border-t border-white/10">
+            <div className="border-t border-brand-200">
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index}

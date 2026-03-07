@@ -60,11 +60,11 @@ export const ClinicianProfile = () => {
   const clinician = profiles[idNum] || profiles[0];
 
   return (
-    <div className="min-h-screen bg-[#1c1c1c] text-white pt-24 pb-20">
+    <div className="min-h-screen bg-white text-brand-900 pt-28 pb-20">
       <div className="container mx-auto px-6">
         
         {/* Back Link */}
-        <Link to="/experts" className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-8">
+        <Link to="/experts" className="inline-flex items-center gap-2 text-brand-500 hover:text-brand-900 transition-colors mb-8">
           <ArrowLeft className="w-4 h-4" />
           Back to Experts
         </Link>
@@ -73,29 +73,29 @@ export const ClinicianProfile = () => {
           
           {/* Left Column: Photo & Quick Stats */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="aspect-[3/4] bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 relative">
+            <div className="aspect-[3/4] bg-brand-100 rounded-2xl overflow-hidden border border-brand-200 relative">
                <img 
                  src={clinician.image} 
                  alt={clinician.name} 
                  className="w-full h-full object-cover grayscale"
                />
-               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1c1c1c]/90 to-transparent p-6 pt-20">
+               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#2D3436]/90 to-transparent p-6 pt-20">
                   <div className="flex items-center gap-2 text-[#0BA4AE] font-bold mb-1">
                     <Star className="w-4 h-4 fill-current" />
                     <span>{clinician.rating} / 5.0</span>
-                    <span className="text-neutral-500 text-sm font-normal">({clinician.reviews} reviews)</span>
+                    <span className="text-brand-500 text-sm font-normal">({clinician.reviews} reviews)</span>
                   </div>
                </div>
             </div>
 
-            <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 space-y-4">
+            <div className="bg-brand-50 border border-brand-200 rounded-xl p-6 space-y-4">
                <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-full bg-[#0BA4AE]/10 flex items-center justify-center text-[#0BA4AE]">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs text-neutral-500 uppercase font-bold tracking-wider">Experience</p>
-                    <p className="font-medium">10+ Years</p>
+                    <p className="text-xs text-brand-500 uppercase font-bold tracking-wider">Experience</p>
+                    <p className="font-medium text-brand-900">10+ Years</p>
                   </div>
                </div>
                <div className="flex items-center gap-4">
@@ -103,8 +103,8 @@ export const ClinicianProfile = () => {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs text-neutral-500 uppercase font-bold tracking-wider">Service Area</p>
-                    <p className="font-medium">Scottsdale & Phoenix</p>
+                    <p className="text-xs text-brand-500 uppercase font-bold tracking-wider">Service Area</p>
+                    <p className="font-medium text-brand-900">Scottsdale & Phoenix</p>
                   </div>
                </div>
                <div className="flex items-center gap-4">
@@ -112,8 +112,8 @@ export const ClinicianProfile = () => {
                     <Calendar className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs text-neutral-500 uppercase font-bold tracking-wider">Availability</p>
-                    <p className="font-medium">{clinician.availability}</p>
+                    <p className="text-xs text-brand-500 uppercase font-bold tracking-wider">Availability</p>
+                    <p className="font-medium text-brand-900">{clinician.availability}</p>
                   </div>
                </div>
             </div>
@@ -128,36 +128,36 @@ export const ClinicianProfile = () => {
 
              <div className="flex flex-wrap gap-2 my-6">
                 {clinician.specialties.map(tag => (
-                   <span key={tag} className="px-3 py-1 bg-neutral-900 border border-neutral-800 rounded-full text-xs font-semibold text-neutral-300 uppercase tracking-wider">
+                   <span key={tag} className="px-3 py-1 bg-brand-50 border border-brand-200 rounded-full text-xs font-semibold text-brand-600 uppercase tracking-wider">
                       {tag}
                    </span>
                 ))}
              </div>
 
-             <div className="prose prose-invert prose-lg max-w-none text-neutral-400 mb-12">
+             <div className="prose prose-lg max-w-none text-brand-500 mb-12">
                 <p>{clinician.bio}</p>
              </div>
 
              <div className="mb-12">
-                <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                <h3 className="text-xl font-bold text-brand-900 mb-6 flex items-center gap-2">
                    <Award className="w-5 h-5 text-[#0BA4AE]" />
                    Education & Certifications
                 </h3>
                 <ul className="space-y-4">
                    {clinician.education.map((edu, i) => (
-                      <li key={i} className="flex items-start gap-4 p-4 bg-neutral-900/50 rounded-lg border border-neutral-800/50">
+                      <li key={i} className="flex items-start gap-4 p-4 bg-brand-50 rounded-lg border border-brand-100">
                          <div className="w-1.5 h-1.5 rounded-full bg-[#0BA4AE] mt-2.5 shrink-0" />
-                         <span className="text-neutral-300">{edu}</span>
+                         <span className="text-brand-700">{edu}</span>
                       </li>
                    ))}
                 </ul>
              </div>
 
-             <div className="flex flex-col sm:flex-row gap-4 border-t border-neutral-800 pt-8">
+             <div className="flex flex-col sm:flex-row gap-4 border-t border-brand-200 pt-8">
                 <Link to="/intake" className="px-8 py-4 bg-[#0BA4AE] text-white font-bold rounded-sm hover:bg-[#088f98] transition-colors text-center uppercase tracking-wide">
                    Book Evaluation with {clinician.name.split(' ').slice(1).join(' ')}
                 </Link>
-                <button className="px-8 py-4 border border-neutral-700 text-white font-bold rounded-sm hover:bg-neutral-800 transition-colors text-center uppercase tracking-wide">
+                <button className="px-8 py-4 border border-brand-300 text-brand-900 font-bold rounded-sm hover:bg-brand-50 transition-colors text-center uppercase tracking-wide">
                    Contact for Questions
                 </button>
              </div>

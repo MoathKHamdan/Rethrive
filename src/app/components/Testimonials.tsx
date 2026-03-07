@@ -43,7 +43,7 @@ const tags = [
 ];
 
 const Marquee = ({ reverse = false }: { reverse?: boolean }) => (
-    <div className="flex overflow-hidden py-4 border-y border-slate-100 bg-white select-none">
+    <div className="flex overflow-hidden py-4 border-y border-brand-100 bg-white select-none">
         <motion.div 
             className="flex gap-8 items-center whitespace-nowrap"
             animate={{ x: reverse ? "0%" : "-50%" }}
@@ -52,7 +52,7 @@ const Marquee = ({ reverse = false }: { reverse?: boolean }) => (
         >
             {[...tags, ...tags, ...tags, ...tags].map((tag, i) => (
                 <div key={i} className="flex items-center gap-8">
-                    <span className="text-xs font-bold tracking-widest text-slate-400">{tag}</span>
+                    <span className="text-xs font-bold tracking-widest text-brand-400">{tag}</span>
                     <Zap className="w-4 h-4 text-[#0BA4AE] fill-current" />
                 </div>
             ))}
@@ -103,7 +103,7 @@ export const Testimonials = () => {
                         {/* Text Content */}
                         <div className="flex flex-col items-center justify-center mb-12 w-full max-w-5xl mx-auto">
                             <motion.blockquote 
-                                className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#111111] leading-tight mb-8 w-full text-center"
+                                className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#2D3436] leading-tight mb-8 w-full text-center"
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3 }}
@@ -117,10 +117,10 @@ export const Testimonials = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.4 }}
                             >
-                                <p className="text-xl font-bold text-[#111111]">
+                                <p className="text-xl font-bold text-[#2D3436]">
                                     {testimonials[current].author}
                                 </p>
-                                <p className="text-sm text-slate-500 mt-1">
+                                <p className="text-sm text-brand-500 mt-1">
                                     {testimonials[current].role}
                                 </p>
                             </motion.div>
@@ -128,26 +128,26 @@ export const Testimonials = () => {
                     </motion.div>
                 </AnimatePresence>
 
-                <div className="flex flex-wrap items-center justify-center gap-8 mt-auto border-t border-slate-100 pt-8">
+                <div className="flex flex-wrap items-center justify-center gap-8 mt-auto border-t border-brand-100 pt-8">
                     {/* Counter & Controls */}
                     <div className="flex items-center gap-8">
-                        <div className="text-4xl md:text-6xl font-light text-[#111111] tracking-tighter">
+                        <div className="text-4xl md:text-6xl font-light text-[#2D3436] tracking-tighter">
                             0{current + 1}
-                            <span className="text-lg md:text-xl text-slate-400 font-normal ml-2">/ 0{testimonials.length}</span>
+                            <span className="text-lg md:text-xl text-brand-400 font-normal ml-2">/ 0{testimonials.length}</span>
                         </div>
 
                         <div className="flex gap-4">
-                            <button onClick={prev} className="p-3 rounded-full border border-slate-200 hover:border-[#0BA4AE] hover:text-[#0BA4AE] transition-colors">
+                            <button onClick={prev} className="p-3 rounded-full border border-brand-200 hover:border-[#0BA4AE] hover:text-[#0BA4AE] transition-colors">
                                 <ArrowLeft className="w-6 h-6" />
                             </button>
-                            <button onClick={next} className="p-3 rounded-full border border-slate-200 hover:border-[#0BA4AE] hover:text-[#0BA4AE] transition-colors">
+                            <button onClick={next} className="p-3 rounded-full border border-brand-200 hover:border-[#0BA4AE] hover:text-[#0BA4AE] transition-colors">
                                 <ArrowRight className="w-6 h-6" />
                             </button>
                         </div>
                     </div>
 
                     {/* CTA Button */}
-                    <Link to="/intake" className="px-8 py-4 bg-[#0BA4AE] text-white font-bold hover:bg-[#1c1c1c] transition-colors shadow-lg uppercase tracking-wide rounded-full">
+                    <Link to="/intake" className="px-8 py-4 bg-[#0BA4AE] text-white font-bold hover:bg-[#2D3436] transition-colors shadow-lg uppercase tracking-wide rounded-full">
                         Get Started
                     </Link>
                 </div>

@@ -16,7 +16,7 @@ import { Blog } from './pages/Blog';
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white font-sans selection:bg-[#0BA4AE] selection:text-white relative">
+      <div className="min-h-screen bg-white font-['Plus_Jakarta_Sans',sans-serif] selection:bg-[#0BA4AE] selection:text-white relative">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

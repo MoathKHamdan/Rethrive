@@ -67,11 +67,9 @@ export const Experts = () => {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
 
   return (
-    <div className="min-h-screen bg-white text-neutral-900">
+    <div className="min-h-screen bg-white text-brand-900">
       {/* Hero Section with Brand Background */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-[#1c1c1c]">
-        <BrandBackground scrollStyle={{ y }} />
-        
+      <section className="relative pt-36 pb-20 overflow-hidden bg-brand-50 border-b border-brand-100">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,8 +77,8 @@ export const Experts = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl mb-6 text-white">Meet Our Expert Team</h1>
-            <p className="text-lg md:text-xl text-neutral-300 leading-relaxed">
+            <h1 className="text-4xl md:text-6xl mb-6 text-brand-900">Meet Our Expert Team</h1>
+            <p className="text-lg md:text-xl text-brand-500 leading-relaxed">
               Dedicated professionals committed to your recovery, wellness, and long-term health. 
               Each member of our team brings years of experience and a passion for helping you thrive.
             </p>
@@ -98,11 +96,11 @@ export const Experts = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-xl overflow-hidden border border-neutral-200 hover:border-[#0BA4AE]/50 transition-colors group shadow-sm hover:shadow-lg"
+              className="bg-white rounded-xl overflow-hidden border border-brand-200 hover:border-[#0BA4AE]/50 transition-colors group shadow-sm hover:shadow-lg"
             >
               <div className="grid md:grid-cols-[300px_1fr] lg:grid-cols-[400px_1fr] gap-0">
                 {/* Image */}
-                <div className="relative h-80 md:h-full bg-neutral-200 overflow-hidden">
+                <div className="relative h-80 md:h-full bg-brand-200 overflow-hidden">
                   <img 
                     src={member.image} 
                     alt={member.name}
@@ -117,11 +115,11 @@ export const Experts = () => {
                 {/* Content */}
                 <div className="p-6 md:p-8 lg:p-10 flex flex-col justify-center">
                   <div className="mb-4">
-                    <h3 className="text-2xl md:text-3xl mb-2 text-neutral-900">{member.name}</h3>
+                    <h3 className="text-2xl md:text-3xl mb-2 text-brand-900">{member.name}</h3>
                     <p className="text-[#0BA4AE] font-medium">{member.credentials}</p>
                   </div>
                   
-                  <div className="space-y-4 text-neutral-700 leading-relaxed">
+                  <div className="space-y-4 text-brand-700 leading-relaxed">
                     {member.bio.map((paragraph, i) => (
                       <p key={i} className="text-sm md:text-base">
                         {paragraph}
@@ -136,9 +134,7 @@ export const Experts = () => {
       </section>
 
       {/* CTA Section with Brand Background */}
-      <section className="relative py-24 overflow-hidden bg-[#1c1c1c]">
-        <BrandBackground scrollStyle={{ y }} />
-        
+      <section className="relative py-24 overflow-hidden bg-[#0BA4AE]">
         <div className="container mx-auto px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -148,7 +144,7 @@ export const Experts = () => {
             className="max-w-3xl mx-auto"
           >
             <h2 className="text-3xl md:text-5xl mb-6 text-white">Ready to Start Your Journey?</h2>
-            <p className="text-neutral-300 text-lg mb-8 leading-relaxed">
+            <p className="text-white/80 text-lg mb-8 leading-relaxed">
               Work with our experienced team to achieve your health and wellness goals. 
               We're here to support you every step of the way.
             </p>

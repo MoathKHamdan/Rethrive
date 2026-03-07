@@ -16,7 +16,7 @@ const VideoModal = ({ isOpen, onClose }: VideoModalProps) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-[#1c1c1c]/80 backdrop-blur-sm" 
+                className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-[#2D3436]/80 backdrop-blur-sm" 
                 onClick={onClose}
             >
                 <motion.div 
@@ -24,12 +24,12 @@ const VideoModal = ({ isOpen, onClose }: VideoModalProps) => {
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.9, opacity: 0 }}
                     transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                    className="relative w-full max-w-5xl aspect-video bg-[#1c1c1c] rounded-2xl overflow-hidden shadow-2xl"
+                    className="relative w-full max-w-5xl aspect-video bg-[#2D3436] rounded-2xl overflow-hidden shadow-2xl"
                     onClick={(e) => e.stopPropagation()}
                 >
                     <button 
                         onClick={onClose}
-                        className="absolute top-4 right-4 z-10 p-2 bg-[#1c1c1c]/50 text-white rounded-full hover:bg-white hover:text-[#1c1c1c] transition-colors"
+                        className="absolute top-4 right-4 z-10 p-2 bg-[#2D3436]/50 text-white rounded-full hover:bg-white hover:text-[#2D3436] transition-colors"
                     >
                         <X className="w-6 h-6" />
                     </button>
@@ -69,14 +69,14 @@ export const Philosophy = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
-    <section className="bg-[#0F5C5B] py-24 relative overflow-hidden text-white">
+    <section className="bg-brand-50 py-24 relative overflow-hidden text-brand-900">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none" 
-           style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}>
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+           style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #0BA4AE 1px, transparent 0)', backgroundSize: '40px 40px' }}>
       </div>
       
-      {/* Glow Effect (V13 Lime/Teal) */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D9F257] rounded-full blur-[150px] opacity-10 pointer-events-none mix-blend-overlay" />
+      {/* Glow Effect */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0BA4AE] rounded-full blur-[200px] opacity-[0.06] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -96,7 +96,7 @@ export const Philosophy = () => {
                         alt="Founder working with patient" 
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-[#1c1c1c]/30 group-hover:bg-[#1c1c1c]/40 transition-colors" />
+                    <div className="absolute inset-0 bg-[#2D3436]/30 group-hover:bg-[#2D3436]/40 transition-colors" />
                     
                     {/* Custom Play Button - V13 Colors */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-white/50">
@@ -117,25 +117,25 @@ export const Philosophy = () => {
                 variants={fadeInUp}
             >
                 <div>
-                    <span className="text-[#D9F257] font-bold tracking-wider uppercase text-sm mb-2 block">Our Philosophy</span>
+                    <span className="text-[#0BA4AE] font-bold tracking-wider uppercase text-sm mb-2 block">Our Philosophy</span>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                         Health is an <br />
-                        <span className="text-white relative inline-block">
+                        <span className="text-[#0BA4AE] relative inline-block">
                             Investment.
-                            <svg className="absolute w-full h-3 -bottom-1 left-0 text-[#D9F257] -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <svg className="absolute w-full h-3 -bottom-1 left-0 text-[#0BA4AE]/20 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
                             </svg>
                         </span>
                     </h2>
-                    <p className="text-slate-300 text-lg leading-relaxed max-w-xl">
+                    <p className="text-brand-500 text-lg leading-relaxed max-w-xl">
                         "We believe healthcare should be proactive, not reactive. At ReThrive, we prioritize depth over volume, partnering with you to build a foundation for a lifetime of vitality—without the constraints of insurance."
                     </p>
                 </div>
 
                 <div className="space-y-4">
                     {valuePoints.map((point, idx) => (
-                        <div key={idx} className="flex items-center gap-4 text-slate-200">
-                            <div className="p-1 rounded-full bg-[#D9F257] text-[#187F7E]">
+                        <div key={idx} className="flex items-center gap-4 text-brand-700">
+                            <div className="p-1 rounded-full bg-[#0BA4AE]/10 text-[#0BA4AE]">
                                 <CheckCircle2 className="w-5 h-5" />
                             </div>
                             <span className="font-medium">{point}</span>

@@ -8,7 +8,7 @@ interface BrandBackgroundProps {
 export const BrandBackground = ({ scrollStyle }: BrandBackgroundProps) => {
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1c1c1c] via-[#052e31] to-[#0BA4AE] opacity-20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#2D3436] via-[#052e31] to-[#0BA4AE] opacity-20" />
       {/* Large Repeated Text Background - Parallax Effect */}
       <motion.div
         style={scrollStyle}

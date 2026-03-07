@@ -14,17 +14,17 @@ const LOGOS = [
 
 export function Ticker() {
   return (
-    <section className="py-10 bg-[#1c1c1c] border-y border-white/5">
+    <section className="py-10 bg-brand-50 border-y border-brand-100">
       <div className="container mx-auto px-6 mb-6">
-        <p className="text-center text-neutral-500 text-sm font-medium uppercase tracking-widest">
+        <p className="text-center text-brand-500 text-sm font-medium uppercase tracking-widest">
           Trusted by market leaders
         </p>
       </div>
-      <Marquee gradient={true} gradientColor="#1c1c1c" speed={40}>
+      <Marquee gradient={true} gradientColor="#f5fafa" speed={40}>
         {LOGOS.map((logo, index) => (
           <div
             key={index}
-            className="mx-12 text-2xl font-bold text-neutral-700 hover:text-white transition-colors cursor-default"
+            className="mx-12 text-2xl font-bold text-brand-300 hover:text-brand-900 transition-colors cursor-default"
           >
             {logo}
           </div>

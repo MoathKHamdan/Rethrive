@@ -1,0 +1,12 @@
+<svg width="120" height="30" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- RE text -->
+  <text x="6" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0BA4AE" letter-spacing="-0.5">RE</text>
+  
+  <!-- THRIVE text -->
+  <text x="32" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#0BA4AE" letter-spacing="0.5">THRIVE</text>
+  
+  <!-- Decorative dots/squares on left -->
+  <rect x="6" y="8" width="3" height="3" fill="#0BA4AE"/>
+  <rect x="11" y="8" width="3" height="3" fill="#0BA4AE"/>
+  <rect x="16" y="8" width="3" height="3" fill="#0BA4AE"/>
+</svg>

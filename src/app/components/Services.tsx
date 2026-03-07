@@ -53,7 +53,7 @@ const staggerContainer = {
 
 export const Services = () => {
   return (
-    <section id="services" className="py-32 bg-[#FAFAFA] relative overflow-hidden">
+    <section id="services" className="py-32 bg-brand-50 relative overflow-hidden">
       
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03] z-0 pointer-events-none" 
@@ -72,7 +72,7 @@ export const Services = () => {
                 variants={fadeInUp}
                 className="mb-8"
              >
-                <h2 className="text-5xl md:text-6xl font-black text-[#111111] tracking-tight leading-[1.1]">
+                <h2 className="text-5xl md:text-6xl font-black text-[#2D3436] tracking-tight leading-[1.1]">
                     In Home Physical Therapy. <br />
                     No Doctor Referral Needed.
                 </h2>
@@ -82,7 +82,7 @@ export const Services = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
-                className="text-slate-600 leading-relaxed text-lg"
+                className="text-brand-600 leading-relaxed text-lg"
              >
                 <p>
                     ReThrive Wellness brings top-tier physical therapy directly to your home in Phoenix and Scottsdale. With no need for doctor referrals we make the process painless. No need for rushed appointments or divided attention, our 60-minute blocks with licensed doctors of physical therapy will get you feeling great in no time.
@@ -102,27 +102,27 @@ export const Services = () => {
                     key={index}
                     variants={fadeInUp}
                     whileHover={{ y: -5 }}
-                    className="group relative bg-[#1a1a1a] rounded-[24px] overflow-hidden p-8 md:p-10 flex flex-col shadow-2xl hover:shadow-[#0BA4AE]/10 border border-white/5 hover:border-[#0BA4AE]/50 transition-all duration-300"
+                    className="group relative bg-white rounded-[24px] overflow-hidden p-8 md:p-10 flex flex-col shadow-md hover:shadow-xl border border-brand-200 hover:border-[#0BA4AE]/50 transition-all duration-300"
                 >
                     <div className="flex justify-between items-start mb-6">
                         <div className="flex items-center gap-4">
-                            <div className="p-3 rounded-full bg-[#0BA4AE] text-white">
+                            <div className="p-3 rounded-full bg-[#0BA4AE]/10 text-[#0BA4AE]">
                                 <service.icon className="w-6 h-6" />
                             </div>
-                            <h3 className="text-2xl font-medium text-white">{service.category}</h3>
+                            <h3 className="text-2xl font-medium text-brand-900">{service.category}</h3>
                         </div>
                     </div>
                     
                     <div className="space-y-4">
                         <div className="flex flex-wrap gap-2">
                             {service.tags.map(tag => (
-                                <span key={tag} className="px-3 py-1 bg-[#2a2a2a] text-[10px] font-bold text-[#0BA4AE] rounded uppercase tracking-wider">
+                                <span key={tag} className="px-3 py-1 bg-brand-50 text-[10px] font-bold text-[#0BA4AE] rounded uppercase tracking-wider border border-brand-100">
                                     {tag}
                                 </span>
                             ))}
                         </div>
-                        <h4 className="text-xl font-bold text-white uppercase tracking-wide">{service.title}</h4>
-                        <p className="text-slate-400 leading-relaxed text-base">
+                        <h4 className="text-xl font-bold text-brand-900 uppercase tracking-wide">{service.title}</h4>
+                        <p className="text-brand-500 leading-relaxed text-base">
                             {service.description}
                         </p>
                     </div>

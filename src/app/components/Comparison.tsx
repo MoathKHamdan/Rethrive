@@ -51,7 +51,7 @@ const fadeInUp = {
 
 export const Comparison = () => {
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-24 bg-brand-50 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div 
             className="text-center max-w-3xl mx-auto mb-16"
@@ -60,10 +60,10 @@ export const Comparison = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-brand-900 tracking-tight">
             The ReThrive <span className="text-[#187F7E]">Advantage</span>
           </h2>
-          <p className="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-brand-600 text-lg leading-relaxed max-w-2xl mx-auto">
             See why our direct-pay model delivers better outcomes than traditional insurance-based care.
           </p>
         </motion.div>
@@ -76,14 +76,14 @@ export const Comparison = () => {
             variants={fadeInUp}
         >
             {/* V13 Styled Table Container */}
-            <div className="bg-white rounded-3xl shadow-xl border border-slate-100 min-w-[600px] md:min-w-0 relative overflow-hidden">
+            <div className="bg-white rounded-3xl shadow-xl border border-brand-100 min-w-[600px] md:min-w-0 relative overflow-hidden">
                  {/* Decorative Lime Accent */}
                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#D9F257] blur-[60px] opacity-20 pointer-events-none" />
 
-                <div className="grid grid-cols-3 bg-slate-50/80 p-6 border-b border-slate-200">
-                    <div className="text-slate-500 font-bold uppercase tracking-wider text-xs md:text-sm pt-2">Comparison</div>
+                <div className="grid grid-cols-3 bg-brand-50/80 p-6 border-b border-brand-200">
+                    <div className="text-brand-500 font-bold uppercase tracking-wider text-xs md:text-sm pt-2">Comparison</div>
                     <div className="text-center">
-                        <div className="inline-block px-4 py-1 rounded-full bg-slate-200 text-slate-600 font-bold text-xs md:text-sm">Traditional</div>
+                        <div className="inline-block px-4 py-1 rounded-full bg-brand-200 text-brand-600 font-bold text-xs md:text-sm">Traditional</div>
                     </div>
                     <div className="text-center">
                         {/* V13 Teal & Lime Badge */}
@@ -91,17 +91,17 @@ export const Comparison = () => {
                     </div>
                 </div>
 
-                <div className="divide-y divide-slate-100">
+                <div className="divide-y divide-brand-100">
                     {comparisonData.map((row, idx) => (
                         <div key={idx} className="grid grid-cols-3 p-6 items-center hover:bg-[#D9F257]/5 transition-colors duration-300">
-                            <div className="font-semibold text-slate-700 text-sm md:text-base pr-4">{row.feature}</div>
+                            <div className="font-semibold text-brand-700 text-sm md:text-base pr-4">{row.feature}</div>
                             
-                            <div className="text-center flex flex-col items-center justify-center text-slate-500 text-sm md:text-base border-r border-slate-100 px-2">
+                            <div className="text-center flex flex-col items-center justify-center text-brand-500 text-sm md:text-base border-r border-brand-100 px-2">
                                 <span className="block mb-1 opacity-50"><X className="w-5 h-5 text-red-400" /></span>
                                 <span>{row.traditional}</span>
                             </div>
                             
-                            <div className="text-center flex flex-col items-center justify-center text-slate-900 font-bold text-sm md:text-base px-2">
+                            <div className="text-center flex flex-col items-center justify-center text-brand-900 font-bold text-sm md:text-base px-2">
                                 <span className="block mb-1 text-[#187F7E]"><Check className="w-5 h-5" /></span>
                                 <span className={row.highlight ? "text-[#187F7E]" : ""}>{row.rethrive}</span>
                             </div>
@@ -109,8 +109,8 @@ export const Comparison = () => {
                     ))}
                 </div>
                 
-                <div className="bg-[#187F7E]/5 p-6 text-center border-t border-slate-100">
-                    <p className="text-slate-600 text-sm flex items-center justify-center gap-2">
+                <div className="bg-[#187F7E]/5 p-6 text-center border-t border-brand-100">
+                    <p className="text-brand-600 text-sm flex items-center justify-center gap-2">
                         <Info className="w-4 h-4 text-[#187F7E]" />
                         <span>By bypassing insurance restrictions, we focus 100% on your recovery goals.</span>
                     </p>

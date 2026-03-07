@@ -8,9 +8,9 @@ const logos = [
 
 export const SocialProof = () => {
   return (
-    <section className="py-12 bg-white border-y border-slate-100 overflow-hidden">
+    <section className="py-12 bg-white border-y border-brand-100 overflow-hidden">
       <div className="container mx-auto px-6 mb-8 text-center">
-        <p className="text-sm font-medium text-slate-400 uppercase tracking-widest">Insurance Partners Accepted</p>
+        <p className="text-sm font-medium text-brand-400 uppercase tracking-widest">Insurance Partners Accepted</p>
       </div>
       
       <div className="relative flex overflow-hidden mask-gradient-x">
@@ -27,7 +27,7 @@ export const SocialProof = () => {
           {[...logos, ...logos, ...logos, ...logos, ...logos, ...logos].map((logo, index) => (
             <span
               key={index}
-              className="text-xl md:text-2xl font-bold text-slate-300 hover:text-[#187F7E] transition-colors cursor-default select-none uppercase tracking-tight"
+              className="text-xl md:text-2xl font-bold text-brand-300 hover:text-[#187F7E] transition-colors cursor-default select-none uppercase tracking-tight"
             >
               {logo}
             </span>

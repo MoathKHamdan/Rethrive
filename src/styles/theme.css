@@ -81,6 +81,17 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* Teal-tinted charcoal palette — replaces neutral/slate greys */
+  --color-brand-50: #f5fafa;
+  --color-brand-100: #e9f3f4;
+  --color-brand-200: #d4e6e8;
+  --color-brand-300: #b0ced2;
+  --color-brand-400: #84aeb4;
+  --color-brand-500: #5e919a;
+  --color-brand-600: #4a7880;
+  --color-brand-700: #3d6168;
+  --color-brand-800: #334f54;
+  --color-brand-900: #2D3436;
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);

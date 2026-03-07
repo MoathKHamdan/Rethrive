@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 export const Footer = () => {
   return (
-    <footer className="bg-slate-900 border-t border-slate-800 pt-16 pb-8 text-slate-400 text-sm">
+    <footer className="bg-brand-50 border-t border-brand-200 pt-16 pb-8 text-brand-500 text-sm">
       {/* Mobile: vertical stack with centered text. Desktop: 3-column grid with left align */}
       <div className="container mx-auto px-6 mb-12">
         <div className="flex flex-col md:flex-row md:grid md:grid-cols-3 gap-12 text-center md:text-left">
@@ -13,7 +13,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <Link to="/" className="flex items-center gap-2 mb-4">
                <div className="h-8 w-8 bg-[#0BA4AE] rounded-sm"></div>
-               <span className="text-xl font-bold tracking-tight text-white">
+               <span className="text-xl font-bold tracking-tight text-brand-900">
                   ReThrive
                </span>
             </Link>
@@ -21,13 +21,13 @@ export const Footer = () => {
               Empowering your wellness journey through personalized physical therapy and holistic care.
             </p>
             <div className="flex gap-4 justify-center md:justify-start">
-               <a href="#" className="text-slate-400 hover:text-[#0BA4AE] hover:underline transition-colors" aria-label="Instagram">
+               <a href="#" className="text-brand-400 hover:text-[#0BA4AE] hover:underline transition-colors" aria-label="Instagram">
                  <Instagram className="w-5 h-5"/>
                </a>
-               <a href="#" className="text-slate-400 hover:text-[#0BA4AE] hover:underline transition-colors" aria-label="Facebook">
+               <a href="#" className="text-brand-400 hover:text-[#0BA4AE] hover:underline transition-colors" aria-label="Facebook">
                  <Facebook className="w-5 h-5"/>
                </a>
-               <a href="#" className="text-slate-400 hover:text-[#0BA4AE] hover:underline transition-colors" aria-label="LinkedIn">
+               <a href="#" className="text-brand-400 hover:text-[#0BA4AE] hover:underline transition-colors" aria-label="LinkedIn">
                  <Linkedin className="w-5 h-5"/>
                </a>
             </div>
@@ -35,7 +35,7 @@ export const Footer = () => {
 
           {/* Quick Links Section */}
           <div className="flex flex-col items-center md:items-start">
-            <h4 className="text-white font-bold mb-4">Quick Links</h4>
+            <h4 className="text-brand-900 font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="hover:text-[#0BA4AE] hover:underline transition-colors">
@@ -62,7 +62,7 @@ export const Footer = () => {
 
           {/* Contact Section */}
           <div className="flex flex-col items-center md:items-start">
-            <h4 className="text-white font-bold mb-4">Contact</h4>
+            <h4 className="text-brand-900 font-bold mb-4">Contact</h4>
             <ul className="space-y-3">
               <li className="flex items-center justify-center md:justify-start gap-2">
                   <Mail className="w-4 h-4 text-[#0BA4AE]" />
@@ -95,11 +95,11 @@ export const Footer = () => {
       </div>
       
       {/* Bottom Bar */}
-      <div className="container mx-auto px-6 pt-8 border-t border-slate-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="container mx-auto px-6 pt-8 border-t border-brand-200 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
         <p>&copy; {new Date().getFullYear()} ReThrive Wellness. All rights reserved.</p>
         <div className="flex gap-6">
-             <a href="#" className="hover:text-white hover:underline transition-colors">Privacy Policy</a>
-             <a href="#" className="hover:text-white hover:underline transition-colors">Terms of Service</a>
+             <a href="#" className="hover:text-brand-900 hover:underline transition-colors">Privacy Policy</a>
+             <a href="#" className="hover:text-brand-900 hover:underline transition-colors">Terms of Service</a>
         </div>
       </div>
     </footer>

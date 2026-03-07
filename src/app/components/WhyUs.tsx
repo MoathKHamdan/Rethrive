@@ -61,18 +61,19 @@ export const WhyUs = () => {
     <section 
       ref={containerRef}
       id="why-us" 
-      className="bg-[#1c1c1c] py-24 relative overflow-hidden"
+      className="bg-brand-50 py-24 relative overflow-hidden"
     >
         
-        {/* Background Gradient & Outline Text */}
-        <BrandBackground scrollStyle={{ y: y1 }} />
+        {/* Subtle background accent */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0BA4AE] rounded-full blur-[200px] opacity-[0.06] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#0BA4AE] rounded-full blur-[180px] opacity-[0.04] pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         
         {/* Main Floating Container */}
         <motion.div 
             style={{ y: y2 }}
-            className="bg-[#0e1f21]/95 backdrop-blur-sm rounded-[40px] p-8 md:p-16 border border-[#0BA4AE]/20 shadow-2xl shadow-[#0BA4AE]/5"
+            className="bg-white rounded-[40px] p-8 md:p-16 border border-brand-200 shadow-xl"
         >
             <div className="grid lg:grid-cols-2 gap-16">
                 
@@ -84,24 +85,24 @@ export const WhyUs = () => {
                     viewport={{ once: true }}
                     variants={staggerContainer}
                 >
-                    <motion.h2 variants={fadeInUp} className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight leading-tight">
+                    <motion.h2 variants={fadeInUp} className="text-4xl md:text-6xl font-black text-brand-900 mb-8 tracking-tight leading-tight">
                         Skip the clinic. <br/><span className="text-[#0BA4AE]">Community Based Doctors,</span> right at your door.
                     </motion.h2>
-                    <motion.p variants={fadeInUp} className="text-slate-300 leading-relaxed text-lg mb-10">
+                    <motion.p variants={fadeInUp} className="text-brand-500 leading-relaxed text-lg mb-10">
                         At ReThrive Wellness we pride ourselves on being the best in home physical therapy. We don't work through the traditional constraints of insurance based clinics. By removing the "middle man," we focus 100% on you to provide higher quality care, faster results, and a personalized experience that simply isn't possible in a high-volume setting.
                     </motion.p>
                     
                     <motion.div variants={fadeInUp} className="flex flex-wrap gap-6">
-                        <Link to="/intake" className="px-8 py-4 bg-[#0BA4AE] text-white font-bold hover:bg-white hover:text-[#1c1c1c] transition-colors shadow-lg uppercase tracking-wide rounded-sm">
+                        <Link to="/intake" className="px-8 py-4 bg-[#0BA4AE] text-white font-bold hover:bg-brand-900 transition-colors shadow-lg uppercase tracking-wide rounded-sm">
                             Book Appointment
                         </Link>
-                        <Link to="/model" className="px-8 py-4 bg-transparent border border-white/20 text-white font-bold hover:bg-white/10 transition-colors flex items-center gap-2 uppercase tracking-wide rounded-sm">
+                        <Link to="/model" className="px-8 py-4 bg-transparent border border-brand-300 text-brand-900 font-bold hover:bg-brand-50 transition-colors flex items-center gap-2 uppercase tracking-wide rounded-sm">
                             Our Model
                         </Link>
                     </motion.div>
                 </motion.div>
 
-                {/* Right Grid of White Cards */}
+                {/* Right Grid of Cards */}
                 <motion.div 
                     className="grid sm:grid-cols-2 gap-6"
                     initial="hidden"
@@ -113,14 +114,14 @@ export const WhyUs = () => {
                         <motion.div
                             key={idx}
                             variants={fadeInUp}
-                            className="bg-white rounded-[24px] p-8 flex flex-col items-start gap-4 hover:scale-[1.02] transition-transform duration-300 shadow-xl"
+                            className="bg-brand-50 rounded-[24px] p-8 flex flex-col items-start gap-4 hover:scale-[1.02] transition-transform duration-300 shadow-sm border border-brand-100 hover:border-[#0BA4AE]/30 hover:shadow-md"
                         >
-                            <div className="p-3 bg-slate-100 rounded-full text-[#111111] group-hover:bg-[#0BA4AE] group-hover:text-white transition-colors">
+                            <div className="p-3 bg-[#0BA4AE]/10 rounded-full text-[#0BA4AE]">
                                 <feature.icon className="w-6 h-6" />
                             </div>
                             <div>
-                                <h3 className="text-lg font-black text-[#111111] mb-2 uppercase">{feature.title}</h3>
-                                <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                                <h3 className="text-lg font-black text-brand-900 mb-2 uppercase">{feature.title}</h3>
+                                <p className="text-brand-500 text-sm leading-relaxed font-medium">
                                     {feature.description}
                                 </p>
                             </div>
