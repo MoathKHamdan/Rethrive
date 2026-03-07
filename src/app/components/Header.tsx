@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown, CalendarCheck, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Link, useLocation } from "react-router";
-import logoImg from "figma:asset/49d554f608539b6ea09d09640cb16274c5f78458.png";
+
+import logoImg from "../../assets/Rectangle.png";
 
 export const Header = () => {
   const [isHidden, setIsHidden] = useState(false);
@@ -82,7 +83,6 @@ export const Header = () => {
 
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center gap-8 relative z-10">
-
             <Link
               to="/intake"
               className="bg-[#0BA4AE] text-white hover:bg-brand-900 px-6 py-2.5 font-bold text-[14px] transition-all shadow-sm rounded-sm uppercase tracking-wide"
